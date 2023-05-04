@@ -9,16 +9,16 @@ const VideoCard = (info) => {
     const viewCount = info?.statistics?.viewCount;
 
     return (
-        <div className='p-2 m-2 w-96 shadow-lg'>
+        <div className='p-2 m-2 w-[344px]'>
             <img
-                className='rounded-lg w-full'
+                className='rounded-lg w-full h-[194px]'
                 src={url}
                 alt='thumbnail'
             />
             <ul>
                 <li className='font-bold py-1'>{title}</li>
-                <li>{channelTitle}</li>
-                <li>{viewCount} views</li>
+                <li className='text-gray-700 font-normal text-[0.95rem]'>{channelTitle}</li>
+                <li className='text-gray-700 font-normal text-[0.95rem]'>{viewCount} views</li>
             </ul>
         </div>
     )

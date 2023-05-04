@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import { Link } from 'react-router-dom';
 
 const list = ["All", "Music", "Mixes", "Gaming", "Cricket", "Live", "News", "Soccer", "Comedy", "Cooking", "Valentines"];
 
@@ -8,11 +9,16 @@ const ButtonList = () => {
     <div className='flex' >
       {
         list.map((item, index) => {
-          return <Button key={index} name={item} />
+          return (
+            <Link to={`/results?searchQuery=${item}`} key={index}>
+              <Button name={item} />
+            </Link>
+          )
+
         })
       }
     </div>
   )
 }
 
-export default ButtonList
+export default ButtonList;

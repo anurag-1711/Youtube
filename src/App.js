@@ -8,11 +8,19 @@ import MainContatiner from './components/MainContatiner';
 import WatchPage from './components/WatchPage';
 import Demo from './components/Demo';
 import Demo2 from './components/Demo2';
+import Results from './components/Results';
+
+const AppLayout = () => {
+  return <>
+    <Head />
+    <Body />
+  </>
+}
 
 const appRouter = createBrowserRouter([
   {
     path: '/',
-    element: <Body />,
+    element: <AppLayout />,
     children: [
       {
         path: '/',
@@ -21,7 +29,12 @@ const appRouter = createBrowserRouter([
       {
         path: 'watch',
         element: <WatchPage />
-      }, {
+      },
+      {
+        path: 'results',
+        element: <Results />
+      },
+      {
         path: 'demo',
         element: <><Demo /> <Demo2 /></>
       }
@@ -32,28 +45,24 @@ const appRouter = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
-      <div>
-        <Head />
-        <RouterProvider router={appRouter} />
-
-
-        {
-          /***
-           * 
-           * Head
-           * Body
-           *    - SideBar
-           *       - MenuItems
-           *    - MainContainer
-           *       - ButtonsList
-           *       - VideoContainer
-           *          - VideoCard
-           * 
-           */
-        }
-      </div>
+      <RouterProvider router={appRouter} />
     </Provider>
   );
 }
 
 export default App;
+
+// {
+//   /***
+//    * 
+//    * Head
+//    * Body
+//    *    - SideBar
+//    *       - MenuItems
+//    *    - MainContainer
+//    *       - ButtonsList
+//    *       - VideoContainer
+//    *          - VideoCard
+//    * 
+//    */
+// }
