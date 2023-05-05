@@ -13,7 +13,7 @@ const VideoCard = (info) => {
             <img
                 className='rounded-lg w-full h-[194px]'
                 src={url}
-                alt='thumbnail'
+                alt={title}
             />
             <ul>
                 <li className='font-bold py-1'>{title}</li>
