@@ -1,56 +1,74 @@
-var nameList = [
-    'Time', 'Past', 'Future', 'Dev',
-    'Fly', 'Flying', 'Soar', 'Soaring', 'Power', 'Falling',
-    'Fall', 'Jump', 'Cliff', 'Mountain', 'Rend', 'Red', 'Blue',
-    'Green', 'Yellow', 'Gold', 'Demon', 'Demonic', 'Panda', 'Cat',
-    'Kitty', 'Kitten', 'Zero', 'Memory', 'Trooper', 'XX', 'Bandit',
-    'Fear', 'Light', 'Glow', 'Tread', 'Deep', 'Deeper', 'Deepest',
-    'Mine', 'Your', 'Worst', 'Enemy', 'Hostile', 'Force', 'Video',
-    'Game', 'Donkey', 'Mule', 'Colt', 'Cult', 'Cultist', 'Magnum',
-    'Gun', 'Assault', 'Recon', 'Trap', 'Trapper', 'Redeem', 'Code',
-    'Script', 'Writer', 'Near', 'Close', 'Open', 'Cube', 'Circle',
-    'Geo', 'Genome', 'Germ', 'Spaz', 'Shot', 'Echo', 'Beta', 'Alpha',
-    'Gamma', 'Omega', 'Seal', 'Squid', 'Money', 'Cash', 'Lord', 'King',
-    'Duke', 'Rest', 'Fire', 'Flame', 'Morrow', 'Break', 'Breaker', 'Numb',
-    'Ice', 'Cold', 'Rotten', 'Sick', 'Sickly', 'Janitor', 'Camel', 'Rooster',
-    'Sand', 'Desert', 'Dessert', 'Hurdle', 'Racer', 'Eraser', 'Erase', 'Big',
-    'Small', 'Short', 'Tall', 'Sith', 'Bounty', 'Hunter', 'Cracked', 'Broken',
-    'Sad', 'Happy', 'Crimson', 'Destiny', 'Deceit', 'Lies',
-    'Lie', 'Honest', 'Destined', 'Bloxxer', 'Hawk', 'Eagle', 'Hawker', 'Walker',
-    'Zombie', 'Sarge', 'Capt', 'Captain', 'Punch', 'One', 'Two', 'Uno', 'Slice',
-    'Slash', 'Melt', 'Melted', 'Melting', 'Fell', 'Wolf', 'Hound',
-    'Legacy', 'Sharp', 'Dead', 'Mew', 'Chuckle', 'Bubba', 'Bubble', 'Sandwich', 'Smasher', 'Extreme', 'Multi', 'Universe', 'Ultimate', 'Death', 'Ready', 'Monkey', 'Elevator', 'Wrench', 'Grease', 'Head', 'Theme', 'Grand', 'Cool', 'Kid', 'Boy', 'Girl', 'Vortex', 'Paradox'
+const nameList = ['Aarav', 'Aaryan', 'Aditya', 'Agastya', 'Akshat', 'Aman', 'Amit', 'Anand', 'Anmol', 'Arjun', 'Aryan', 'Ayush', 'Dhruv', 'Ekansh', 'Harsh', 'Ishan', 'Ishaan', 'Jai', 'Jaidev', 'Karan', 'Krishna', 'Kunal', 'Madhav', 'Manish', 'Mohan', 'Naman', 'Om', 'Param', 'Pranav', 'Ravi', 'Rohan', 'Saahil', 'Sameer', 'Sahil', 'Saket', 'Sahil', 'Shivam', 'Shreyas', 'Siddharth', 'Soham', 'Tarun', 'Uday', 'Varun', 'Vihaan', 'Virat', 'Yash', 'Yashveer', 'Aahana', 'Aditi', 'Aloka', 'Aparajita', 'Avni', 'Charvi', 'Diya', 'Eesha', 'Gauri', 'Hiya', 'Ira', 'Jiya', 'Kiara', 'Kriti', 'Lakshmi', 'Maya', 'Meera', 'Naina', 'Neha', 'Priya', 'Radhika', 'Riya', 'Sanya', 'Sejal', 'Tara', 'Trisha', 'Uma', 'Vani', 'Veda', 'Zara'];
+
+const messages = [
+    "Great video!",
+    "I learned a lot. 📚",
+    "My favorite YouTuber!",
+    "Can't wait for next! 🔥",
+    "Thanks for sharing! 🙏",
+    "Really helpful! 👍",
+    "So glad I watched! 😊",
+    "Best video in a while! 💯",
+    "Subscribing now! 🔔",
+    "Can't wait to see! 👀",
+    "This is amazing! 🤩",
+    "I love this! ❤️",
+    "Best video ever! 🏆",
+    "So glad I found! 🤗",
+    "Very helpful! 💡",
+    "Sharing with friends! 🤝",
+    "So inspiring! ✨",
+    "Can't stop watching! 👀",
+    "Well-made! 💯",
+    "Love the way you explain! 🗣️",
+    "Best video on this topic! 🎓",
+    "So glad I subscribed! 👍",
+    "Very funny! 😂",
+    "Can't wait to see what's next! 👀",
+    "Best video in a long time! 💯",
+    "Subscribing for sure! 💯",
+    "Very informative! 💡",
+    "Love the way you present! 🗣️",
+    "Well-researched! 🔍",
+    "So glad I found this! 🤗",
+    "Very informative. 💡",
+    "Glad I watched. 😊",
+    "Great video, thanks! 🙏",
+    "Learned a lot. 📚",
+    "Will try this out. 🧪",
+    "Very helpful. 👍",
+    "Can't wait for next! 🔥",
+    "Favorite YouTuber! 👑",
+    "So glad I found! 🤗",
+    "Very well-made. 💯",
+    "Amazing production value! 🤩",
+    "Top-notch editing! ✂️",
+    "Perfect audio quality! 🎚️",
+    "Stunning visuals! 🖼️",
+    "So much work went into this! 💪",
+    "Very talented creator! 👩‍🎨",
+    "So glad I watched. 😊",
+    "Truly enjoyable experience. 😌",
+    "Would definitely recommend! 👍",
+    "One of the best videos ever! 🏆",
+    "So glad I found! 🤗",
+    "Can't wait to see what they make next! 👀",
+    "Very thought-provoking. 🤔",
+    "Made me think in a new way. 💡",
+    "I respect their opinion. 🤝",
+    "Glad to learn something new. 😊",
+    "How can apply it to my own life? 🧠",
+    "This video has really opened my mind🙏",
 ];
+
 
 export function generateRandomNames() {
     return nameList[Math.floor(Math.random() * nameList.length)];
 };
 
 export function generateRandomText() {
-    let result = '';
-    const characters = 'abcdefghijklmnopqrstuvwxyz';
-    const charactersLength = characters.length;
-    let counter = 0;
-    const ln = [20, 25, 30, 15, 35, 10]
-    const i = Math.floor(Math.random() * ln.length);
-    while (counter < ln[i]) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        counter += 1;
-        if (counter % 5 === 0) {
-            result += ' ';
-        }
-    }
-    if (i === 0) {
-        result += '🚀';
-    } else if (i === 1) {
-        result += '❤️'
-    } else if (i === 2) {
-        result += '🙏'
-    } else if (i === 3) {
-        result += '🎉'
-    }
-    return result;
-}
+    return messages[Math.floor(Math.random() * messages.length)];
+};
 
 export const findPrime = num => {
     let i, primes = [2, 3], n = 5;
